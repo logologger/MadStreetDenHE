@@ -59,7 +59,7 @@
               <p><b>Color&nbsp;:&nbsp;</b><i class="fa fa-tags" style="color:{{w.color}}"></i></p>
               <p ><b>Quantity: </b><span class="text-muted">{{w.quantity}} </span></p>
               <p class="text-muted">  {{w.price | currency:'&#x20b9;&nbsp;'}} &nbsp;&nbsp;&nbsp;&nbsp;| <span star-rating rating-value="w.rating" max="5"></span>{{w.rating}}</p>
-            <p><b>Category:  </b><span class="text-warning">{{w.category===0?"Apparel":"Accessories"}}</span></p>
+            <p><b>Category:  </b><span class="text-warning">{{w.category==0?"Apparel":"Accessories"}}</span></p>
              
               <p class="text-muted">{{w.description}}</p>
             </div>
