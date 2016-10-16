@@ -107,13 +107,15 @@ ul.rating {
 div.panel-body{
 
 
-	min-height:250px;
-	max-height:250px;
+	min-height:300px;
+	max-height:300px;
 }
 div.panel-body:hover{
 
 
 	background-color: #F6F6F7;
+	
+
 }
 .sortBox{
 	font-size: 160%;
