@@ -1,0 +1,79 @@
+ 
+<div class="container main_container" >
+  <div class="row">
+  
+    <div class="col-md-6">
+    <div class="wrapper">
+    
+      <input type="search" class="form-control" placeholder="Search (by name or category)" ng-model="main.query[main.queryBy]" />
+
+      
+        
+    </div>
+
+  </div>
+  <div class="col-md-6">
+  <span class="sortBox"><b>Sort By :</b>
+  <label class="radio-inline"><input type="radio" ng-model="main.sortIt" value="price"/>Price</label>
+ 
+  
+
+<label class="radio-inline">
+  <input type="radio" ng-model="main.sortIt" value="category"/>Category
+  </label>
+
+</span>
+  
+  
+  </div>
+  <!-- <div class="col-md-3">
+
+      
+       <ul class="list-group"  style="display:inline-block">
+       <li class="list-group-item text-info">Sort By</li>
+  <li class="list-group-item"> <input type="radio"/>&nbsp;Rating</li>
+  <li class="list-group-item"><input type="radio"/>&nbsp;Likes</li>
+  
+</ul>
+</span>
+  
+     
+      
+    
+  </div> -->
+  </div>
+  <div class="row">
+    <div class="col-md-6 products_pa" ng-repeat="w in main.products | filter:main.query | orderBy:main.sortIt">
+    <div class="panel panel-default panel-primary" >
+    
+        <div class="panel-body">
+          
+        <!-- Custom Div is needed to display Every information regarding the Product -->
+          <div class="row">
+            <div class="col-md-6">
+            <!-- img will go here -->
+            <img ng-src="{{w.image}}" alt="Product Image" height="150px" width="120px"/>
+            </div>
+            <div class="col-md-6">
+              <p class="heading text-info">{{w.name}}</p>
+              <p><b>Color&nbsp;:&nbsp;</b><i class="fa fa-tags" style="color:{{w.color}}"></i></p>
+              <p class="text-muted"><b>Quantity: </b>{{w.quantity}} </p>
+              <p class="text-muted">  {{w.price | currency:'&#x20b9;&nbsp;'}} &nbsp;&nbsp;&nbsp;&nbsp;| <span star-rating rating-value="w.rating" max="5"></span>{{w.rating}}</p>
+            
+             
+              <p class="text-muted">{{w.description}}</p>
+            </div>
+          </div>
+
+
+        </div>
+    </div>
+
+    </div>
+    
+    </div>
+  </div>
+
+
+
+
