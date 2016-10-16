@@ -132,3 +132,16 @@ header{
 
 	font-family: 'Dancing Script', cursive;
 }
+
+@media only screen and (max-width: 970px){
+
+div.panel-body{
+
+	min-height:300px;
+	max-height:450px;
+	
+	
+}
+
+
+	}

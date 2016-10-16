@@ -9,6 +9,7 @@ angular.module('mainController',[])
     vm.queryBy = 'name';
     vm.sortIt='category';
     
+    
 
 	 vm.results=callService.doServiceCall(callback);
 	
